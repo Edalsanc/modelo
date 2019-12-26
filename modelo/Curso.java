@@ -1,4 +1,7 @@
 package modelo;
+import javax.swing.JOptionPane;
+
+import static javax.swing.JOptionPane.*;
 
 public class Curso {
 
@@ -52,5 +55,14 @@ public class Curso {
     public boolean estaCalificado(){
 
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return JOptionPane.showInputDialog(null,"Curso: " +
+                "codigoCurso: " + codigoCurso + '\'' +
+                ", nombreCurso: " + nombreCurso + '\'' +
+                ", creditos: " + creditos +
+                ", notas: " + notas);
     }
 }
